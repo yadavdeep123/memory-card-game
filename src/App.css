@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+
+  font-family: Arial;
+
+  background: #141e30;
+
+  color: white;
+}
+
+.header {
+  display: flex;
+
+  justify-content: space-between;
+
+  padding: 20px;
+
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 100px);
+
+  gap: 15px;
+
+  justify-content: center;
+
+  padding: 20px;
+}
+
+.card {
+  width: 100px;
+
+  height: 100px;
+
+  cursor: pointer;
+
+  position: relative;
+
+  transform-style: preserve-3d;
+
+  transition: 0.5s;
+}
+
+.flip {
+  transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  position: absolute;
+
+  width: 100%;
+
+  height: 100%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  font-size: 35px;
+
+  border-radius: 12px;
+
+  backface-visibility: hidden;
+}
+
+.front {
+  background: #2193b0;
+}
+
+.back {
+  background: white;
+
+  color: black;
+
+  transform: rotateY(180deg);
+}
+
+.modal {
+  position: fixed;
+
+  top: 50%;
+
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  background: white;
+
+  color: black;
+
+  padding: 30px;
+
+  border-radius: 15px;
+
+  text-align: center;
+}
+
+button {
+  padding: 10px 20px;
+
+  margin: 10px;
+
+  cursor: pointer;
+
+  border: none;
+
+  background: #ff9800;
+
+  color: white;
+
+  border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(4, 70px);
+  }
+
+  .card {
+    width: 70px;
+
+    height: 70px;
+  }
+}
